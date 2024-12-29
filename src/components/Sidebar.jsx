@@ -25,7 +25,7 @@ export default function Sidebar() {
 
     return (
         <>
-            {/* Overlay (for mobile sidebar) */}
+            {/* Mobile */}
             {isOpen && (
                 <div
                     className="fixed inset-0 z-30 bg-black bg-opacity-50 md:hidden"
@@ -72,22 +72,29 @@ export default function Sidebar() {
             {/* Sidebar */}
             <div
                 className={`fixed inset-y-0 left-0 z-[999] overflow-y-auto no-scrollbar transform ${isOpen ? "translate-x-0" : "-translate-x-full"
-                    } w-[260px] bg-white border-r transition-transform duration-300 ease-in-out md:translate-x-0`}
+                    } w-[260px] bg-[#FBFBFB] border-r transition-transform duration-300 ease-in-out md:translate-x-0`}
             >
                 {/* Logo */}
-                <div className="flex items-center h-16 border-b px-4">
-                    <img src="/Logo.png" alt="logo" className="h-8" />
-                    <h1 className="text-lg font-bold ml-2">Medicore</h1>
+                <div className="flex items-center justify-between h-16 border-b px-4">
+                    <div className="flex items-center space-x-2">
+                        <img src="/Logo.png" alt="logo" className="h-8" />
+                        <h1 className="text-lg font-bold ml-2">Medicore</h1>
+                    </div>
+                    <div>
+                        <button>
+                            <span className="material-symbols-outlined">two_pager</span>
+                        </button>
+                    </div>
                 </div>
 
                 {/* Search */}
                 <div className="p-4">
                     <div className="relative">
-                        <span className="material-symbols-outlined absolute">search</span>
+                        <span className="material-symbols-outlined absolute top-2 left-3">search</span>
                         <input
                             type="text"
                             placeholder="Search"
-                            className="w-full px-4 py-2 text-sm text-gray-700 bg-gray-100 border rounded-lg focus:outline-none"
+                            className="w-full px-4 pl-10 py-2 text-sm text-gray-700 bg-white border rounded-lg focus:outline-none"
                         />
                         <img src={Shortcut} alt="shortcut" className="absolute w-8 h-8 text-gray-500 top-1 right-4" />
                     </div>
@@ -95,7 +102,15 @@ export default function Sidebar() {
 
                 {/* Menu Items */}
                 <div className="flex-1 px-4 space-y-2">
-                    <MenuItem icon="grid_view" label="Dashboard" />
+                    <a
+                        href="#"
+                        className="flex items-center justify-between py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg px-4"
+                    >
+                        <div className="flex items-center space-x-4">
+                            <span className="material-symbols-rounded">grid_view</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
                     <MenuItem icon="calendar_month" label="Schedule" />
                     <MenuItem icon="credit_card" label="Transaction" />
                     <MenuItem icon="message" label="Message" notification="10" />
@@ -113,10 +128,10 @@ export default function Sidebar() {
                 </div>
 
                 {/* Footer */}
-                <div className="px-4 py-4 border-t">
+                <div className="px-4 py-4 mt-32">
                     <MenuItem icon="settings" label="Settings" />
                     <MenuItem icon="help" label="Help & Support" />
-                    <div className="flex items-center space-x-4 mt-4">
+                    <div className="flex items-center space-x-4 mt-4 border-t ">
                         <img
                             src="/Avatar-5.png"
                             alt="Admin"
