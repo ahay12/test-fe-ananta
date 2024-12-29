@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Shortcut from "../assets/Shortcut.svg"
 import "material-symbols";
 
 // eslint-disable-next-line react/prop-types
@@ -82,25 +83,13 @@ export default function Sidebar() {
                 {/* Search */}
                 <div className="p-4">
                     <div className="relative">
+                        <span className="material-symbols-outlined absolute">search</span>
                         <input
                             type="text"
                             placeholder="Search"
                             className="w-full px-4 py-2 text-sm text-gray-700 bg-gray-100 border rounded-lg focus:outline-none"
                         />
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="absolute w-4 h-4 text-gray-500 top-3 right-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M10 6a4 4 0 00-3.9 5 4 4 0 101.9 1.1h.1l4.5-4.5m-3.6-.9a4 4 0 01.6-4.5m1.2-1.2A5 5 0 0015.5 7 5 5 0 0110 6z"
-                            />
-                        </svg>
+                        <img src={Shortcut} alt="shortcut" className="absolute w-8 h-8 text-gray-500 top-1 right-4" />
                     </div>
                 </div>
 
