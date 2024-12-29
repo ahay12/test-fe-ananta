@@ -163,9 +163,9 @@ export default function MainChart() {
             {/* Calendar */}
             <CalendarAppointments />
             {/* Card Medicine Supplies */}
-            <div className="lg:absolute top-[510px] lg:w-[25%] w-[95%] bg-white rounded-2xl lg:-ml-[456px] border p-6 lg:mt-10">
+            <div className="lg:absolute top-[510px] lg:w-[28%] w-[95%] bg-white rounded-2xl lg:-ml-[410px] border p-6 lg:mt-10">
                 <div className="flex justify-between items-center">
-                    <div className="flex items-center py-4  ">
+                    <div className="flex items-center py-4">
                         <span className="material-symbols-outlined" style={{ color: "#12B76A" }}>pill</span>
                         <h3 className="text-lg font-semibold">Medicine Supplies</h3>
                     </div>
@@ -177,15 +177,18 @@ export default function MainChart() {
                 </div>
                 <table className="w-full text-left border-collapse">
                     <thead>
-                        <tr>
-                            <th className="border-b py-2">Name</th>
-                            <th className="border-b py-2">Stock</th>
-                            <th className="border-b py-2">Last Month</th>
+                        <tr >
+                            <th className="py-2">Name</th>
+                            <th className="py-2">Stock</th>
+                            <th className="py-2">Last Month</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="py-2">Paracetamol</td>
+                            <td className="py-2 flex items-center space-x-2">
+                                <img src="/Image.png" alt="image" className="w-8 h-8 object-cover" />
+                                <p>Paracetamol</p>
+                            </td>
                             <td className="py-2">140</td>
                             <td className="">
                                 <div className="flex items-center">
@@ -199,7 +202,10 @@ export default function MainChart() {
                             </td>
                         </tr>
                         <tr>
-                            <td className="py-2">Anastrozole</td>
+                            <td className="py-2 flex items-center space-x-2">
+                                <img src="/Image-1.png" alt="image" className="w-8 h-8 object-cover" />
+                                <p>Anastrozole</p>
+                            </td>
                             <td className="py-2">123</td>
                             <td className="">
                                 <div className="flex items-center">
@@ -213,7 +219,10 @@ export default function MainChart() {
                             </td>
                         </tr>
                         <tr>
-                            <td className="py-2">Amoxicillin</td>
+                            <td className="py-2 flex items-center space-x-2">
+                                <img src="/Image-2.png" alt="image" className="w-8 h-8 object-cover" />
+                                <p>Amoxicillin</p>
+                            </td>
                             <td className="py-2">80</td>
                             <td className="">
                                 <div className="flex items-center">
@@ -227,7 +236,10 @@ export default function MainChart() {
                             </td>
                         </tr>
                         <tr>
-                            <td className="py-2">Bisoprolol</td>
+                            <td className="py-2 flex items-center space-x-2">
+                                <img src="/Image-3.png" alt="image" className="w-8 h-8 object-cover" />
+                                <p>Bisoprolol</p>
+                            </td>
                             <td className="py-2">60</td>
                             <td className="">
                                 <div className="flex items-center">
@@ -241,7 +253,10 @@ export default function MainChart() {
                             </td>
                         </tr>
                         <tr>
-                            <td className="py-2">Colidin</td>
+                            <td className="py-2 flex items-center space-x-2">
+                                <img src="/Image-4.png" alt="image" className="w-8 h-8 object-cover" />
+                                <p>Colidin</p>
+                            </td>
                             <td className="py-2">54</td>
                             <td className="">
                                 <div className="flex items-center">
@@ -258,7 +273,7 @@ export default function MainChart() {
                 </table>
             </div>
             {/* Card Top 3 clinic */}
-            <div className="lg:absolute lg:space-x-0 space-y-4 top-[510px] lg:w-[28%] w-[95%] bg-white rounded-2xl lg:ml-96 border p-6 lg:mt-10">
+            <div className="lg:absolute lg:space-x-0 space-y-12 top-[510px] lg:w-[26%] w-[95%] bg-white rounded-2xl lg:ml-[430px] border p-6 lg:mt-10">
                 <div className="flex items-center justify-between">
                     <div className="flex">
                         <span className="material-symbols-outlined" style={{ color: 'red' }}>home_health</span>
