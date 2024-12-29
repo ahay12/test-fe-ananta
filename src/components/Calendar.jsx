@@ -39,14 +39,14 @@ export default function CalendarAppointments() {
       {/* Calendar Grid */}
       <div className='grid grid-cols-7 text-center gap-2 mb-6 place-items-center'>
         {/* Days from previous month */}
-        <div className='text-gray-400'>30</div>
-        <div className='text-gray-400'>31</div>
+        <div className='text-gray-400 hover:p-2 w-full hover:text-white hover:rounded-full hover:bg-[#30374F] ease-in-out duration-300'>30</div>
+        <div className='text-gray-400 hover:p-2 w-full hover:text-white hover:rounded-full hover:bg-[#30374F] ease-in-out duration-300'>31</div>
 
         {/* Current month days */}
         {Array.from({ length: 29 }, (_, i) => (
           <div
             key={i}
-            className={`rounded-full w-full p-2 ${i + 1 === 8 ? 'bg-[#30374F] text-white' : ''
+            className={`rounded-full hover:bg-[#30374F] hover:text-white ease-in-out duration-300 w-full p-2 ${i + 1 === 8 ? 'bg-[#30374F] text-white' : ''
               }`}
           >
             {i + 1}
@@ -54,10 +54,10 @@ export default function CalendarAppointments() {
         ))}
 
         {/* Next month days */}
-        <div className='text-gray-400'>1</div>
-        <div className='text-gray-400'>2</div>
-        <div className='text-gray-400'>3</div>
-        <div className='text-gray-400'>4</div>
+        <button className='text-gray-400 hover:p-2 w-full hover:text-white hover:rounded-full hover:bg-[#30374F] ease-in-out duration-300'>1</button>
+        <button className='text-gray-400 hover:p-2 w-full hover:text-white hover:rounded-full hover:bg-[#30374F] ease-in-out duration-300'>2</button>
+        <button className='text-gray-400 hover:p-2 w-full hover:text-white hover:rounded-full hover:bg-[#30374F] ease-in-out duration-300'>3</button>
+        <button className='text-gray-400 hover:p-2 w-full hover:text-white hover:rounded-full hover:bg-[#30374F] ease-in-out duration-300'>4</button>
       </div>
 
       {/* Appointment Section */}
