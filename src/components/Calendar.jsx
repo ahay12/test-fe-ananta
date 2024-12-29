@@ -1,4 +1,4 @@
-const CalendarAppointments = () => {
+export default function CalendarAppointments() {
   const appointments = [
     { id: 1, image: '/Avatar.png', name: 'Esther Howard', role: 'Poly dental', time: '09:40 AM' },
     { id: 2, image: '/Avatar-1.png', name: 'Arlene McCoy', role: 'Psychiatrist', time: '09:40 AM' },
@@ -98,5 +98,3 @@ const CalendarAppointments = () => {
     </div>
   )
 }
-
-export default CalendarAppointments
