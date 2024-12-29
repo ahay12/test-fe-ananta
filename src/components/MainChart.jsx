@@ -123,7 +123,7 @@ export default function MainChart() {
             <div className="lg:w-[55%] w-[95%] lg:space-x-0 space-y-4 text-xs bg-white rounded-2xl border p-6">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">
-                        <span className="material-symbols-outlined text-indigo-600">groups</span>
+                        <span className="material-symbols-outlined" style={{ color: '#F79009' }}>groups</span>
                         <h1 className="lg:text-xl text-lg font-semibold text-gray-800 ml-2">Patient Overview</h1>
                     </div>
                     <select className="p-2 px-4 rounded-lg text-gray-700 border border-gray-300">
